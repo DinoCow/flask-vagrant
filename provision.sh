@@ -3,6 +3,9 @@ if [ -d "/vagrant/contrajd/venv" ]
 then
    cd /vagrant/contrajd
    . venv/bin/activate
+   pip install Flask
+   pip install requests
+   pip install json
 
    python app &
    
@@ -16,6 +19,8 @@ else
 	. venv/bin/activate
 
 	pip install Flask
+	pip install requests
+	pip install json
 
 	python app.py &
 fi
