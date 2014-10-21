@@ -2,12 +2,12 @@
 if [ -d "/vagrant/contrajd/venv" ]
 then
    cd /vagrant/contrajd
-   . venv/bin/activate
+   source venv/bin/activate
    pip install Flask
    pip install requests
    pip install json
 
-   python app &
+   python app.py &
    
 else
 	cd /vagrant/
@@ -16,7 +16,7 @@ else
 	cd contrajd
 	virtualenv venv
 
-	. venv/bin/activate
+	source venv/bin/activate
 
 	pip install Flask
 	pip install requests
