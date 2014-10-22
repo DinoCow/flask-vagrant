@@ -1,30 +1,21 @@
 #!/bin/sh
-if [ -d "/vagrant/contrajd/venv" ]
+if [ -d "/installed" ]
 then
    cd /vagrant/contrajd
-   source venv/bin/activate
-   pip install Flask
-   pip install requests
-   pip install json
 
    python app.py &
    
 else
 	cd /vagrant/
-	sudo apt-get -y install python python-pip git 
-	sudo pip install virtualenv
+	sudo apt-get -y install python python-pip 
 	cd contrajd
-	virtualenv venv
 
-	source venv/bin/activate
+	sudo pip install Flask 
+	sudo pip install requests
 
-	pip install Flask
-	pip install requests
-	pip install json
+	sudo pip install requests --upgrade
+	
+	sudo mkdir "/installed" 
 
 	python app.py &
 fi
-
-
-
-
