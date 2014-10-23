@@ -3,6 +3,7 @@ if [ -d "/installed" ]
 then
    cd /vagrant/contrajd
 
+   sudo pip install -U flask-cors
    python app.py &
    
 else
@@ -12,6 +13,8 @@ else
 
 	sudo pip install Flask 
 	sudo pip install requests
+	sudo pip install -U flask-cors
+
 
 	sudo pip install requests --upgrade
 	
