@@ -23,7 +23,7 @@ else
 	mkdir "/tmp/pdf"
 	mkdir "/tmp/fdf"
 
-	sudo chmod 777 /tmp/form /tmp/pdf tmp/fdf
+	sudo chmod 777 /tmp/form /tmp/pdf /tmp/fdf
 	cp /vagrant/*.pdf /tmp/form
 	python app.py &
 fi
