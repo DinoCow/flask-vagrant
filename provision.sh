@@ -1,9 +1,14 @@
 #!/bin/sh
 if [ -d "/installed" ]
 then
-   cd /vagrant/contrajd
+    cd /vagrant/contrajd
+	mkdir "/tmp/form"
+	mkdir "/tmp/pdf"
+	mkdir "/tmp/fdf"
 
-   python app.py &
+	sudo chmod 777 /tmp/form /tmp/pdf /tmp/fdf
+	cp /vagrant/*.pdf /tmp/form
+    python app.py &
    
 else
 	cd /vagrant/
